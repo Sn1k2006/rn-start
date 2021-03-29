@@ -1,4 +1,4 @@
-package com.app;
+package com.adcombo.horoscope;
 
 import com.facebook.react.ReactActivity;
 

@@ -8,6 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "icon": "ts-node icons.ts",
+    "rename": "npx react-native-rename 'Horoscope' -b com.adcombo.horoscope",
     "lint": "eslint ."
   },
   "dependencies": {

@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "626669935841",
-    "project_id": "app-app-8a0fb",
-    "storage_bucket": "app-app-8a0fb.appspot.com"
+    "project_number": "1033918015243",
+    "project_id": "horoscope-4c907",
+    "storage_bucket": "horoscope-4c907.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:626669935841:android:c2016ccc10f6999defeba0",
+        "mobilesdk_app_id": "1:1033918015243:android:6a5327df26014ceed7e40e",
         "android_client_info": {
-          "package_name": "com.app"
+          "package_name": "com.adcombo.horoscope"
         }
       },
       "oauth_client": [
         {
-          "client_id": "626669935841-slcl34mrvoiei4pioh6umnf1jnr2tf64.apps.googleusercontent.com",
+          "client_id": "1033918015243-toqh52jfonjl2grispbsh359naosufh5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDO_RjoZKiIA5pLpwL6kb0OsQesZZykvUQ"
+          "current_key": "AIzaSyCb5qbJTVpVslHc1OurLekuUU0bPTE5UmM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "626669935841-slcl34mrvoiei4pioh6umnf1jnr2tf64.apps.googleusercontent.com",
+              "client_id": "1033918015243-toqh52jfonjl2grispbsh359naosufh5.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1033918015243-149v00icmn0e12nibtd4f02d4ct92vtg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.adcombo.horoscope"
+              }
             }
           ]
         }

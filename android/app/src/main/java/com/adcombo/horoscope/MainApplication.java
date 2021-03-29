@@ -1,4 +1,4 @@
-package com.app;
+package com.adcombo.horoscope;
 
 import android.app.Application;
 import android.content.Context;
@@ -43,7 +43,18 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    //DEEPLINK FB
+     AppLinkData.fetchDeferredAppLinkData(this, getString(R.string.facebook_app_id),
+        new AppLinkData.CompletionHandler() {
+            @Override
+            public void onDeferredAppLinkDataFetched(AppLinkData appLinkData) {
+                Log.d("SplashActivity", "appLinkData: " + appLinkData);
+            }
+        }
+    );
     SoLoader.init(this, /* native exopackage */ false);
+    FacebookSdk.sdkInitialize(getApplicationContext());
+    AppEventsLogger.activateApp(this);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
 
@@ -62,7 +73,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.app.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.adcombo.horoscope.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
