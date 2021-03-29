@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
 
@@ -91,7 +92,7 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
-def enableSeparateBuildPerCPUArchitecture = false
+def enableSeparateBuildPerCPUArchitecture = true
 
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
@@ -152,6 +153,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+             if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                 storeFile file(MYAPP_RELEASE_STORE_FILE)
+                 storePassword MYAPP_RELEASE_STORE_PASSWORD
+                 keyAlias MYAPP_RELEASE_KEY_ALIAS
+                 keyPassword MYAPP_RELEASE_KEY_PASSWORD
+             }
+          }
     }
     buildTypes {
         debug {
@@ -184,6 +193,20 @@ android {
 }
 
 dependencies {
+ // <-- My dependencies
+
+    // <-- fbsdk
+        implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    //  fbsdk -->
+
+    // <-- Firebase
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    // Firebase -->
+
+    implementation "androidx.multidex:multidex:2.0.1"
+    // My dependencies -->
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules

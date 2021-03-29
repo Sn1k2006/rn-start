@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">app</string>
+    <string name="app_name">KETO</string>
+    <string name="facebook_app_id">722939881959401</string>
+    <string name="fb_login_protocol_scheme">fb722939881959401</string>
 </resources>

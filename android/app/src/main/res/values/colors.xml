@@ -1,0 +1,5 @@
+<resources>
+  <color name="background">#000000</color>
+  <color name="statusbarBg">#000000</color>
+  <color name="bottomNavBg">#000000</color>
+</resources>
